@@ -1,0 +1,44 @@
+{
+  "name": "vibe-coding-companion",
+  "version": "0.3.0",
+  "description": "A context-aware Codex companion for focused coding sessions, YouTube and X inspiration, local session tracking, project shipping, and time-boxed game breaks.",
+  "author": {
+    "name": "leiMizzou",
+    "url": "https://github.com/leiMizzou"
+  },
+  "homepage": "https://github.com/leiMizzou/vibe-coding-companion",
+  "repository": "https://github.com/leiMizzou/vibe-coding-companion",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "vibe-coding",
+    "browser",
+    "youtube",
+    "twitter",
+    "focus",
+    "productivity",
+    "games",
+    "poker"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Vibe Coding 伴侣",
+    "shortDescription": "专注编码、媒体灵感、会话记录、发布收尾与限时休息",
+    "longDescription": "在 Codex 里开启有目标的 Vibe Coding 会话：根据当前项目安排专注、学习、探索或发布节奏，在内嵌 Browser 中打开 YouTube 和 X 内容，本地记录会话，并提供免费德州扑克与 wxiu 街机的限时 Break Mode。需要已安装并启用 OpenAI Browser 插件。",
+    "developerName": "leiMizzou",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/leiMizzou/vibe-coding-companion",
+    "defaultPrompt": [
+      "开始一个 45 分钟的 Vibe Coding 会话，先看当前项目再安排节奏",
+      "打开 YouTube，找一个适合当前项目的编码节目",
+      "根据当前仓库做一份 YouTube 和 X 灵感雷达",
+      "开一个 15 分钟的免费德州扑克 Break Mode"
+    ],
+    "brandColor": "#7C3AED"
+  }
+}

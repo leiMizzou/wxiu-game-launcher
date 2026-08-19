@@ -1,117 +1,113 @@
-# Wxiu Game Launcher for Codex
+# Vibe Coding Companion for Codex
 
 [中文](#中文说明) · [English](#english)
 
-An open-source Codex plugin that turns `wxiu.com` into a persistent arcade companion inside Codex's built-in Browser.
+An open-source Codex plugin that turns the built-in Browser into a context-aware coding companion: focus sessions, relevant YouTube and X inspiration, local progress, release preparation, and deliberate breaks.
 
-![Codex opening King of Fighters '98 from wxiu.com in the built-in Browser](assets/promo-codex-wxiu-v0.2.0.png)
+![Vibe Coding Companion opening an arcade break inside Codex](assets/arcade-break-mode.png)
 
 ## 中文说明
 
-### 功能
+### 它做什么
 
-- 指定游戏直达，例如“打开拳皇 98 游戏室”
-- 街机雷达：按实时玩家、房间和类型扫描大厅
-- 游戏轮盘：根据人数、时间、心情和排除条件选游戏
-- 生成随机或主题街机挑战
-- 保存每日挑战、连续打卡、游玩历史与六种成就徽章
-- 协助创建好友房间、复制邀请链接并起草邀请文案
-- 兼容 wxiu.com 的中文和英文界面
+Vibe Coding Companion 不只是一个游戏启动器。它会先看当前项目，再按你的目标进入五种模式：
 
-### 前置条件
+- `deep-focus`：只围绕一个可验证的编码结果工作，尽量不打开媒体。
+- `learn-and-build`：找一个与项目相关的 YouTube 教程或节目，看完关键内容后立即实现。
+- `explore`：从 YouTube 和 X/Twitter 做一份不超过 5 条的项目灵感雷达。
+- `ship`：检查 diff、运行测试、整理文档、release notes 和宣传文案。
+- `break`：开启有时间上限的 YouTube、X、免费德州扑克或街机休息。
 
-- 支持插件的 ChatGPT/Codex 桌面端或 Codex CLI
-- 已安装并启用 OpenAI 官方 `Browser` 插件
-- 使用内嵌 Browser 时，首次访问 `wxiu.com` 可能需要确认站点权限
+它还可以把目标、模式、时长、保存的链接、笔记和结果记录在本机，方便下一次 Codex 任务继续。
+
+### 可以这样说
+
+```text
+开始一个 45 分钟的 Vibe Coding，会话目标是完成登录页
+根据这个仓库找一个值得看的 YouTube 教程，然后陪我实现
+看看 X 上最近有哪些和这个技术栈相关的高质量帖子
+保存这个视频到本次 coding 会话
+帮我收尾：跑测试、总结 diff、写 release notes
+开一个 15 分钟的免费德州扑克 Break Mode，两个人，不要真钱
+转一下街机轮盘：两个人，20 分钟，想轻松玩
+```
 
 ### 安装
 
-```bash
-codex plugin marketplace add leiMizzou/wxiu-game-launcher --ref main
-codex plugin add wxiu-game-launcher@wxiu-arcade
-```
-
-安装后新建一个 Codex 任务，然后尝试：
-
-```text
-打开拳皇 98 游戏室
-扫描大厅，给我一份实时街机雷达
-转一下游戏轮盘：两个人，20 分钟，想轻松玩
-生成一个适合两个人的随机街机挑战
-生成并保存今天的街机挑战
-我完成挑战了，记录一下并看看解锁了什么成就
-帮我开恐龙快打，生成发给朋友的邀请链接
-```
-
-每日挑战和成就默认保存在 `~/.codex/wxiu-game-launcher/progress.json`。其中只包含游戏名称、模式、挑战状态、日期和可选备注，不保存账号、聊天内容、邀请链接或 Browser 数据。
-
-### 更新
-
-重新添加 Git marketplace 以刷新快照，然后重新安装插件：
+前置条件：Codex/ChatGPT 需要支持插件，并安装启用 OpenAI 官方 Browser 插件。
 
 ```bash
-codex plugin marketplace add leiMizzou/wxiu-game-launcher --ref main
-codex plugin add wxiu-game-launcher@wxiu-arcade
+codex plugin marketplace add leiMizzou/vibe-coding-companion --ref main
+codex plugin add vibe-coding-companion@vibe-coding
 ```
 
-更新后请新建一个 Codex 任务。
+安装后新建一个 Codex 任务。首次访问 YouTube、X、扑克站点或 wxiu.com 时，可能需要确认站点权限或由你完成登录。
 
-### 安全与边界
+### 免费扑克 Break Mode
 
-插件不会自动登录、购买、发送消息、加入陌生玩家的房间，或绕过网站限制。邀请链接只会复制到本地 Browser 剪贴板，发送动作仍由用户决定。
+插件只使用明确标注为免费或 play-money、没有现金价值和真实奖品的网页扑克候选站点，例如 [Poker Now](https://www.pokernow.com/)、[FlopHaus](https://flophauspoker.com/) 和 [pokr](https://www.pokr.live/)。每次打开前都会重新检查页面说明。
 
-本项目不包含或分发 ROM、模拟器文件、游戏资源或 wxiu.com 的网站代码，也不隶属于 wxiu.com。使用者需要遵守网站规则，并合法拥有相应游戏的原版拷贝。游戏名称和商标归各自权利人所有。
+它不会协助真钱、现金、加密货币、抽奖或有奖扑克，也不会处理充值、提现、购买筹码、转移价值、绕过地区限制或年龄检查。私人房间邀请只会起草，不会自动发送。
+
+### 本地数据与隐私
+
+- Vibe Coding 会话：`~/.codex/vibe-coding-companion/sessions.json`
+- 街机挑战与成就：`~/.codex/vibe-coding-companion/arcade-progress.json`
+
+插件只保存你明确要求记录的目标、模式、时长、链接、短笔记和结果；不保存登录凭据、Cookie、私信、完整 Feed、源码、浏览历史、邀请链接或 Browser 数据。两个本地工具都故意不提供 reset/delete 命令。
+
+### 游戏边界
+
+街机功能仍可扫描 wxiu.com 大厅、游戏轮盘、每日挑战、成就和好友邀请，但现在属于 Break Mode。本项目不包含 ROM、模拟器文件、游戏资源或第三方网站代码，也不隶属于这些网站。请遵守网站规则和所在地法律。
 
 ## English
 
-### Features
+### Five session modes
 
-- Open a named arcade game directly in the built-in Browser
-- Scan a live arcade radar using current player and room counts
-- Spin a game roulette using party size, time, mood, and exclusions
-- Generate random or themed arcade challenges
-- Persist daily challenges, streaks, play history, and six achievement badges
-- Prepare a friend-room invitation link and draft message without sending it
-- Work with both Chinese and English wxiu.com interfaces
+- `deep-focus`: one observable coding outcome with minimal media.
+- `learn-and-build`: one relevant video followed by implementation.
+- `explore`: a concise YouTube and X inspiration radar grounded in the repository.
+- `ship`: checks, diff review, documentation, release notes, and launch drafts.
+- `break`: a time-boxed YouTube, X, free poker, or arcade intermission.
 
-### Requirements
-
-- A ChatGPT/Codex surface with plugin support, or Codex CLI
-- OpenAI's official `Browser` plugin installed and enabled
-- Normal site permission approval for `wxiu.com` when first used
+The plugin can also persist explicit session goals, links, notes, and outcomes locally so another Codex task can pick up the thread.
 
 ### Install
 
+Install and enable OpenAI's Browser plugin first, then run:
+
 ```bash
-codex plugin marketplace add leiMizzou/wxiu-game-launcher --ref main
-codex plugin add wxiu-game-launcher@wxiu-arcade
+codex plugin marketplace add leiMizzou/vibe-coding-companion --ref main
+codex plugin add vibe-coding-companion@vibe-coding
 ```
 
-Start a new Codex task after installation and ask it to scan the radar, spin the roulette, save a daily challenge, open a game, or prepare a friend invite.
+Start a new Codex task after installation. Try `Start a 45-minute Vibe Coding session`, `Find one YouTube tutorial relevant to this repo`, `Build an inspiration radar from YouTube and X`, or `Open a 15-minute free Texas Hold'em break with no real money`.
+
+### Safety and privacy
+
+Poker support is restricted to clearly free, play-money experiences with no cash value or real prizes. The plugin does not assist with deposits, withdrawals, paid chips, crypto, sweepstakes, geographic evasion, or age-check bypasses. Social actions, invitations, commits, pushes, merges, releases, and public posts are never performed merely because their drafts were prepared.
+
+Local session state is stored under `~/.codex/vibe-coding-companion/`. It excludes credentials, cookies, private messages, source files, full feeds, and Browser history.
 
 ## Repository layout
 
 ```text
 .
 ├── .agents/plugins/marketplace.json
-├── plugins/wxiu-game-launcher/
+├── plugins/vibe-coding-companion/
 │   ├── .codex-plugin/plugin.json
 │   └── skills/
 ├── scripts/validate.py
-└── tests/test_progress.py
+└── tests/
 ```
 
 ## Development
-
-Run the dependency-free repository checks:
 
 ```bash
 python3 scripts/validate.py
 python3 -m unittest discover -s tests -v
 ```
 
-The plugin has also been validated locally with Codex's official plugin and skill validators.
-
 ## License
 
-The plugin source and instructions are licensed under the [MIT License](LICENSE). Third-party websites, games, names, artwork, and trademarks are not covered by this license.
+The plugin source and instructions are licensed under the [MIT License](LICENSE). Third-party websites, games, videos, posts, names, artwork, and trademarks are not covered by this license.

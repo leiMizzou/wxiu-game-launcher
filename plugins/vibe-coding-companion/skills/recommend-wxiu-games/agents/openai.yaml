@@ -1,0 +1,4 @@
+interface:
+  display_name: "Wxiu Arcade Radar"
+  short_description: "Scan live arcade activity for a deliberate break"
+  default_prompt: "Use $recommend-wxiu-games to scan the live lobby and recommend one 15-minute arcade break."

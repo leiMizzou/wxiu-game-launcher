@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vibe Inspiration Radar"
+  short_description: "Find coding inspiration across YouTube and X"
+  default_prompt: "Use $vibe-inspiration-radar to find useful videos and posts for my current coding task."

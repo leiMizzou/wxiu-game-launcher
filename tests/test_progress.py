@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = (
     ROOT
     / "plugins"
-    / "wxiu-game-launcher"
+    / "vibe-coding-companion"
     / "skills"
     / "wxiu-daily-achievements"
     / "scripts"

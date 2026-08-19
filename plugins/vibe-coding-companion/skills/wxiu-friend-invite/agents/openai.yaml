@@ -1,0 +1,4 @@
+interface:
+  display_name: "Wxiu Friend Break"
+  short_description: "Prepare a friend-room arcade break without sending"
+  default_prompt: "Use $wxiu-friend-invite to prepare a co-op arcade break and draft the invite without sending it."
