@@ -1,0 +1,4 @@
+interface:
+  display_name: "Wxiu Game Roulette"
+  short_description: "Pick live arcade games by mood, time, and party size"
+  default_prompt: "Use $wxiu-game-roulette to pick a game for a 20-minute co-op session."

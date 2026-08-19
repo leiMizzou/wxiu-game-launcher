@@ -2,15 +2,19 @@
 
 [中文](#中文说明) · [English](#english)
 
-An open-source Codex plugin that turns `wxiu.com` into a small arcade companion inside Codex's built-in Browser.
+An open-source Codex plugin that turns `wxiu.com` into a persistent arcade companion inside Codex's built-in Browser.
+
+![Codex opening King of Fighters '98 from wxiu.com in the built-in Browser](assets/promo-codex-wxiu-v0.2.0.png)
 
 ## 中文说明
 
 ### 功能
 
 - 指定游戏直达，例如“打开拳皇 98 游戏室”
-- 读取大厅实时玩家与房间数量并推荐游戏
+- 街机雷达：按实时玩家、房间和类型扫描大厅
+- 游戏轮盘：根据人数、时间、心情和排除条件选游戏
 - 生成随机或主题街机挑战
+- 保存每日挑战、连续打卡、游玩历史与六种成就徽章
 - 协助创建好友房间、复制邀请链接并起草邀请文案
 - 兼容 wxiu.com 的中文和英文界面
 
@@ -31,10 +35,15 @@ codex plugin add wxiu-game-launcher@wxiu-arcade
 
 ```text
 打开拳皇 98 游戏室
-看看现在谁最多，推荐三个游戏
+扫描大厅，给我一份实时街机雷达
+转一下游戏轮盘：两个人，20 分钟，想轻松玩
 生成一个适合两个人的随机街机挑战
+生成并保存今天的街机挑战
+我完成挑战了，记录一下并看看解锁了什么成就
 帮我开恐龙快打，生成发给朋友的邀请链接
 ```
+
+每日挑战和成就默认保存在 `~/.codex/wxiu-game-launcher/progress.json`。其中只包含游戏名称、模式、挑战状态、日期和可选备注，不保存账号、聊天内容、邀请链接或 Browser 数据。
 
 ### 更新
 
@@ -58,8 +67,10 @@ codex plugin add wxiu-game-launcher@wxiu-arcade
 ### Features
 
 - Open a named arcade game directly in the built-in Browser
-- Recommend games using live player and room counts
+- Scan a live arcade radar using current player and room counts
+- Spin a game roulette using party size, time, mood, and exclusions
 - Generate random or themed arcade challenges
+- Persist daily challenges, streaks, play history, and six achievement badges
 - Prepare a friend-room invitation link and draft message without sending it
 - Work with both Chinese and English wxiu.com interfaces
 
@@ -76,7 +87,7 @@ codex plugin marketplace add leiMizzou/wxiu-game-launcher --ref main
 codex plugin add wxiu-game-launcher@wxiu-arcade
 ```
 
-Start a new Codex task after installation and ask it to open a game, recommend an active room, create a challenge, or prepare a friend invite.
+Start a new Codex task after installation and ask it to scan the radar, spin the roulette, save a daily challenge, open a game, or prepare a friend invite.
 
 ## Repository layout
 
@@ -86,7 +97,8 @@ Start a new Codex task after installation and ask it to open a game, recommend a
 ├── plugins/wxiu-game-launcher/
 │   ├── .codex-plugin/plugin.json
 │   └── skills/
-└── scripts/validate.py
+├── scripts/validate.py
+└── tests/test_progress.py
 ```
 
 ## Development
@@ -95,6 +107,7 @@ Run the dependency-free repository checks:
 
 ```bash
 python3 scripts/validate.py
+python3 -m unittest discover -s tests -v
 ```
 
 The plugin has also been validated locally with Codex's official plugin and skill validators.

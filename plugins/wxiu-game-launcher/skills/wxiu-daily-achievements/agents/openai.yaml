@@ -1,0 +1,4 @@
+interface:
+  display_name: "Wxiu Daily Challenges"
+  short_description: "Track daily arcade challenges, streaks, and achievements"
+  default_prompt: "Use $wxiu-daily-achievements to create and save today's arcade challenge."
