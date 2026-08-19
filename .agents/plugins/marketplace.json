@@ -1,0 +1,20 @@
+{
+  "name": "wxiu-arcade",
+  "interface": {
+    "displayName": "Wxiu Arcade"
+  },
+  "plugins": [
+    {
+      "name": "wxiu-game-launcher",
+      "source": {
+        "source": "local",
+        "path": "./plugins/wxiu-game-launcher"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Entertainment"
+    }
+  ]
+}

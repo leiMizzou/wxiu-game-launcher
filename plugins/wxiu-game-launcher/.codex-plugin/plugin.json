@@ -1,0 +1,37 @@
+{
+  "name": "wxiu-game-launcher",
+  "version": "0.1.0",
+  "description": "Launch games, find active rooms, create arcade challenges, and prepare friend invites for wxiu.com in Codex's built-in Browser.",
+  "author": {
+    "name": "leiMizzou",
+    "url": "https://github.com/leiMizzou"
+  },
+  "homepage": "https://github.com/leiMizzou/wxiu-game-launcher",
+  "repository": "https://github.com/leiMizzou/wxiu-game-launcher",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "browser",
+    "arcade",
+    "wxiu",
+    "games"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "\u5fae\u79c0\u6e38\u620f\u542f\u52a8\u5668",
+    "shortDescription": "\u76f4\u8fbe\u6e38\u620f\u3001\u5728\u7ebf\u63a8\u8350\u3001\u968f\u673a\u6311\u6218\u4e0e\u597d\u53cb\u5f00\u9ed1",
+    "longDescription": "\u4f60\u7684\u5fae\u79c0\u8857\u673a\u642d\u5b50\uff1a\u5728 Codex \u5185\u5d4c Browser \u4e2d\u76f4\u8fbe\u6307\u5b9a\u6e38\u620f\uff0c\u8bfb\u53d6\u5927\u5385\u5b9e\u65f6\u4eba\u6570\u63a8\u8350\u503c\u5f97\u73a9\u7684\u623f\u95f4\uff0c\u751f\u6210\u968f\u673a\u8857\u673a\u6311\u6218\uff0c\u5e76\u534f\u52a9\u521b\u5efa\u597d\u53cb\u9080\u8bf7\u94fe\u63a5\u4e0e\u9080\u8bf7\u6587\u6848\u3002\u9700\u8981\u5df2\u5b89\u88c5\u5e76\u542f\u7528 OpenAI Browser \u63d2\u4ef6\u3002",
+    "developerName": "leihua",
+    "category": "Entertainment",
+    "capabilities": [
+      "Interactive"
+    ],
+    "websiteURL": "https://wxiu.com/",
+    "defaultPrompt": [
+      "\u6253\u5f00\u62f3\u7687 98 \u6e38\u620f\u5ba4",
+      "\u770b\u770b\u73b0\u5728\u8c01\u6700\u591a\uff0c\u63a8\u8350\u4e09\u4e2a\u6e38\u620f",
+      "\u751f\u6210\u4e00\u4e2a\u4eca\u65e5\u968f\u673a\u8857\u673a\u6311\u6218"
+    ],
+    "brandColor": "#FF6B35"
+  }
+}
