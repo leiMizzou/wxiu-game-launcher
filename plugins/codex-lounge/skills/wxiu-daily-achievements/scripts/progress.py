@@ -14,7 +14,7 @@ from typing import Any
 
 
 SCHEMA_VERSION = 1
-DEFAULT_FILE = Path.home() / ".codex" / "vibe-coding-companion" / "arcade-progress.json"
+DEFAULT_FILE = Path.home() / ".codex" / "codex-lounge" / "arcade-progress.json"
 MODES = ("solo", "coop", "versus")
 
 

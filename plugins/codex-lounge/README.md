@@ -1,6 +1,6 @@
-# Vibe Coding 伴侣
+# Codex Lounge
 
-一个把 Codex 内嵌 Browser 变成编码伴侣的开源插件。它根据当前项目启动专注、学习、探索、发布或休息会话，并提供：
+一个把 Codex 内嵌 Browser 变成“代码客厅”的开源插件。它根据当前项目启动专注、学习、探索、发布或休息会话，并提供：
 
 - YouTube 视频、节目、频道、播放列表和专注音乐
 - X/Twitter 首页、个人主页、自己的帖子、书签、列表和项目相关搜索
@@ -23,4 +23,4 @@
 
 需要同时安装并启用 OpenAI Browser 插件。媒体、游戏和扑克页面会留在内嵌 Browser 中供用户操作；登录、发帖、发送邀请、付费和其他外部动作不会被默认执行。
 
-本地会话保存在 `~/.codex/vibe-coding-companion/sessions.json`，街机记录保存在 `~/.codex/vibe-coding-companion/arcade-progress.json`。不保存账号、Cookie、私信、源码、完整 Feed、Browser 历史或邀请链接。
+本地会话保存在 `~/.codex/codex-lounge/sessions.json`，街机记录保存在 `~/.codex/codex-lounge/arcade-progress.json`。不保存账号、Cookie、私信、源码、完整 Feed、Browser 历史或邀请链接。

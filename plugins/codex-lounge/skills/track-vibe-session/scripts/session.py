@@ -15,7 +15,7 @@ from urllib.parse import urlparse
 
 
 SCHEMA_VERSION = 1
-DEFAULT_FILE = Path.home() / ".codex" / "vibe-coding-companion" / "sessions.json"
+DEFAULT_FILE = Path.home() / ".codex" / "codex-lounge" / "sessions.json"
 MODES = ("deep-focus", "learn-and-build", "explore", "ship", "break")
 OUTCOMES = ("completed", "partial", "blocked", "abandoned")
 LINK_KINDS = ("youtube", "x", "docs", "repo", "other")

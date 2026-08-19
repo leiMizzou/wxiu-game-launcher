@@ -6,7 +6,7 @@ Contributions are welcome for session modes, media discovery, local tracking, re
 
 1. Fork and clone the repository.
 2. Create a focused branch.
-3. Edit files under `plugins/vibe-coding-companion/`.
+3. Edit files under `plugins/codex-lounge/`.
 4. Run `python3 scripts/validate.py`.
 5. Run `python3 -m unittest discover -s tests -v`.
 6. Test Browser-backed behavior in a new Codex task with OpenAI's Browser plugin enabled.

@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = (
     ROOT
     / "plugins"
-    / "vibe-coding-companion"
+    / "codex-lounge"
     / "skills"
     / "track-vibe-session"
     / "scripts"
@@ -49,7 +49,7 @@ class SessionScriptTest(unittest.TestCase):
             "--minutes",
             "45",
             "--workspace",
-            "vibe-coding-companion",
+            "codex-lounge",
         )
         second = self.result(
             "start",

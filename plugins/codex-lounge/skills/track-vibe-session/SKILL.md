@@ -11,7 +11,7 @@ Use the bundled deterministic script instead of recreating storage logic.
 
 Resolve `scripts/session.py` relative to this SKILL.md and run it with Python 3. The default store is:
 
-`~/.codex/vibe-coding-companion/sessions.json`
+`~/.codex/codex-lounge/sessions.json`
 
 The user may override it with `--file /absolute/path/sessions.json`.
 

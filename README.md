@@ -1,16 +1,18 @@
-# Vibe Coding Companion for Codex
+# Codex Lounge
 
 [中文](#中文说明) · [English](#english)
 
-An open-source Codex plugin that turns the built-in Browser into a context-aware coding companion: focus sessions, relevant YouTube and X inspiration, local progress, release preparation, and deliberate breaks.
+**Code, watch, explore, and take a break—without leaving Codex.**
 
-![Vibe Coding Companion opening an arcade break inside Codex](assets/arcade-break-mode.png)
+An open-source plugin that turns the built-in Browser into a context-aware coding lounge: focus sessions, relevant YouTube and X inspiration, local progress, release preparation, and deliberate breaks.
+
+![Codex Lounge opening an arcade break inside Codex](assets/arcade-break-mode.png)
 
 ## 中文说明
 
 ### 它做什么
 
-Vibe Coding Companion 不只是一个游戏启动器。它会先看当前项目，再按你的目标进入五种模式：
+Codex Lounge 不只是一个游戏启动器。它会先看当前项目，再按你的目标进入五种模式：
 
 - `deep-focus`：只围绕一个可验证的编码结果工作，尽量不打开媒体。
 - `learn-and-build`：找一个与项目相关的 YouTube 教程或节目，看完关键内容后立即实现。
@@ -37,8 +39,8 @@ Vibe Coding Companion 不只是一个游戏启动器。它会先看当前项目�
 前置条件：Codex/ChatGPT 需要支持插件，并安装启用 OpenAI 官方 Browser 插件。
 
 ```bash
-codex plugin marketplace add leiMizzou/vibe-coding-companion --ref main
-codex plugin add vibe-coding-companion@vibe-coding
+codex plugin marketplace add leiMizzou/codex-lounge --ref main
+codex plugin add codex-lounge@codex-lounge
 ```
 
 安装后新建一个 Codex 任务。首次访问 YouTube、X、扑克站点或 wxiu.com 时，可能需要确认站点权限或由你完成登录。
@@ -51,8 +53,8 @@ codex plugin add vibe-coding-companion@vibe-coding
 
 ### 本地数据与隐私
 
-- Vibe Coding 会话：`~/.codex/vibe-coding-companion/sessions.json`
-- 街机挑战与成就：`~/.codex/vibe-coding-companion/arcade-progress.json`
+- Vibe Coding 会话：`~/.codex/codex-lounge/sessions.json`
+- 街机挑战与成就：`~/.codex/codex-lounge/arcade-progress.json`
 
 插件只保存你明确要求记录的目标、模式、时长、链接、短笔记和结果；不保存登录凭据、Cookie、私信、完整 Feed、源码、浏览历史、邀请链接或 Browser 数据。两个本地工具都故意不提供 reset/delete 命令。
 
@@ -77,8 +79,8 @@ The plugin can also persist explicit session goals, links, notes, and outcomes l
 Install and enable OpenAI's Browser plugin first, then run:
 
 ```bash
-codex plugin marketplace add leiMizzou/vibe-coding-companion --ref main
-codex plugin add vibe-coding-companion@vibe-coding
+codex plugin marketplace add leiMizzou/codex-lounge --ref main
+codex plugin add codex-lounge@codex-lounge
 ```
 
 Start a new Codex task after installation. Try `Start a 45-minute Vibe Coding session`, `Find one YouTube tutorial relevant to this repo`, `Build an inspiration radar from YouTube and X`, or `Open a 15-minute free Texas Hold'em break with no real money`.
@@ -87,14 +89,14 @@ Start a new Codex task after installation. Try `Start a 45-minute Vibe Coding se
 
 Poker support is restricted to clearly free, play-money experiences with no cash value or real prizes. The plugin does not assist with deposits, withdrawals, paid chips, crypto, sweepstakes, geographic evasion, or age-check bypasses. Social actions, invitations, commits, pushes, merges, releases, and public posts are never performed merely because their drafts were prepared.
 
-Local session state is stored under `~/.codex/vibe-coding-companion/`. It excludes credentials, cookies, private messages, source files, full feeds, and Browser history.
+Local session state is stored under `~/.codex/codex-lounge/`. It excludes credentials, cookies, private messages, source files, full feeds, and Browser history.
 
 ## Repository layout
 
 ```text
 .
 ├── .agents/plugins/marketplace.json
-├── plugins/vibe-coding-companion/
+├── plugins/codex-lounge/
 │   ├── .codex-plugin/plugin.json
 │   └── skills/
 ├── scripts/validate.py

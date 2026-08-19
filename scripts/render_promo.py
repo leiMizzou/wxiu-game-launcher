@@ -27,7 +27,7 @@ def main() -> None:
     draw.text((1402, 24), "Built-in Browser", font=font(20), fill="#b8c0cc")
 
     draw.rounded_rectangle((28, 108, 354, 856), radius=18, fill="#151922", outline="#343946", width=2)
-    draw.text((54, 140), "vibe-coding-companion", font=font(20, bold=True), fill="white")
+    draw.text((54, 140), "codex-lounge", font=font(22, bold=True), fill="white")
 
     draw.rounded_rectangle((54, 207, 326, 279), radius=12, fill="#232a37", outline="#3d4657", width=2)
     draw.text((72, 228), "Open King of Fighters '98", font=font(20), fill="#e9edf5")

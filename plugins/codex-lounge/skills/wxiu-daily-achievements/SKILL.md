@@ -11,7 +11,7 @@ Persist arcade progress with the bundled deterministic script. Do not recreate i
 
 Resolve `scripts/progress.py` relative to this SKILL.md and run it with Python 3. It stores only game progress at:
 
-`~/.codex/vibe-coding-companion/arcade-progress.json`
+`~/.codex/codex-lounge/arcade-progress.json`
 
 The user may override the location with `--file /absolute/path/progress.json`. Never store credentials, invitation links, chat text, or browser data.
 

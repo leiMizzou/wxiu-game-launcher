@@ -2,7 +2,7 @@
 
 ## 0.3.0
 
-- Rebuild the project as Vibe Coding Companion with no legacy compatibility layer.
+- Rebuild the project as Codex Lounge with no legacy compatibility layer.
 - Add context-aware focus, learn-and-build, explore, ship, and break session modes.
 - Add YouTube and X/Twitter navigation plus a repository-grounded inspiration radar.
 - Add dependency-free local session tracking for goals, links, notes, outcomes, and history.

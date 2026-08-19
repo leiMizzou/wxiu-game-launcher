@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SKILL = (
     ROOT
     / "plugins"
-    / "vibe-coding-companion"
+    / "codex-lounge"
     / "skills"
     / "open-free-poker"
     / "SKILL.md"

@@ -1,14 +1,14 @@
 {
-  "name": "vibe-coding",
+  "name": "codex-lounge",
   "interface": {
-    "displayName": "Vibe Coding Companion"
+    "displayName": "Codex Lounge"
   },
   "plugins": [
     {
-      "name": "vibe-coding-companion",
+      "name": "codex-lounge",
       "source": {
         "source": "local",
-        "path": "./plugins/vibe-coding-companion"
+        "path": "./plugins/codex-lounge"
       },
       "policy": {
         "installation": "AVAILABLE",

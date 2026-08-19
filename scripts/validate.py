@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Dependency-free structural checks for vibe-coding-companion."""
+"""Dependency-free structural checks for Codex Lounge."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PLUGIN_NAME = "vibe-coding-companion"
+PLUGIN_NAME = "codex-lounge"
 PLUGIN = ROOT / "plugins" / PLUGIN_NAME
 MANIFEST = PLUGIN / ".codex-plugin" / "plugin.json"
 MARKETPLACE = ROOT / ".agents" / "plugins" / "marketplace.json"
