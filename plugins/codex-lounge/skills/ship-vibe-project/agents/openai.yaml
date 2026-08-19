@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ship Vibe Project"
+  short_description: "Finish a coding session with checks and launch drafts"
+  default_prompt: "Use $ship-vibe-project to validate this project and prepare it for GitHub and social launch."

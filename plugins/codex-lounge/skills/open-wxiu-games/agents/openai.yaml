@@ -1,0 +1,4 @@
+interface:
+  display_name: "Open Wxiu Arcade Break"
+  short_description: "Open a named wxiu arcade room in Codex Browser"
+  default_prompt: "Use $open-wxiu-games to open King of Fighters '98 as a 15-minute arcade break."

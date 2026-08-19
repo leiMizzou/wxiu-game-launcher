@@ -1,20 +1,20 @@
 {
-  "name": "wxiu-arcade",
+  "name": "codex-lounge",
   "interface": {
-    "displayName": "Wxiu Arcade"
+    "displayName": "Codex Lounge"
   },
   "plugins": [
     {
-      "name": "wxiu-game-launcher",
+      "name": "codex-lounge",
       "source": {
         "source": "local",
-        "path": "./plugins/wxiu-game-launcher"
+        "path": "./plugins/codex-lounge"
       },
       "policy": {
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
-      "category": "Entertainment"
+      "category": "Productivity"
     }
   ]
 }

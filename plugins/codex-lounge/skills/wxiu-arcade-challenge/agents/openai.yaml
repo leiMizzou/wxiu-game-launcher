@@ -1,0 +1,4 @@
+interface:
+  display_name: "Arcade Break Challenge"
+  short_description: "Create one achievable, time-boxed arcade challenge"
+  default_prompt: "Use $wxiu-arcade-challenge to create one achievable 15-minute arcade challenge."

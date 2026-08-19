@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the social preview from a live wxiu.com Browser capture."""
+"""Render the arcade Break Mode preview from a live Browser capture."""
 
 from pathlib import Path
 
@@ -7,8 +7,8 @@ from PIL import Image, ImageDraw, ImageFont
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "assets" / "wxiu-kof98-live.jpg"
-OUTPUT = ROOT / "assets" / "promo-codex-wxiu-v0.2.0.png"
+SOURCE = ROOT / "assets" / "wxiu-arcade-source.jpg"
+OUTPUT = ROOT / "assets" / "arcade-break-mode.png"
 FONT = "/System/Library/Fonts/Supplemental/Arial.ttf"
 FONT_BOLD = "/System/Library/Fonts/Supplemental/Arial Bold.ttf"
 
@@ -27,7 +27,7 @@ def main() -> None:
     draw.text((1402, 24), "Built-in Browser", font=font(20), fill="#b8c0cc")
 
     draw.rounded_rectangle((28, 108, 354, 856), radius=18, fill="#151922", outline="#343946", width=2)
-    draw.text((54, 140), "wxiu-game-launcher", font=font(22, bold=True), fill="white")
+    draw.text((54, 140), "codex-lounge", font=font(22, bold=True), fill="white")
 
     draw.rounded_rectangle((54, 207, 326, 279), radius=12, fill="#232a37", outline="#3d4657", width=2)
     draw.text((72, 228), "Open King of Fighters '98", font=font(20), fill="#e9edf5")
@@ -36,7 +36,7 @@ def main() -> None:
     draw.text((72, 335), "Opening it in the", font=font(21), fill="#bcd0ef")
     draw.text((72, 367), "built-in Browser...", font=font(21), fill="#bcd0ef")
 
-    draw.text((72, 500), "ARCADE COMPANION", font=font(17, bold=True), fill="#9ba8ba")
+    draw.text((72, 500), "BREAK MODE", font=font(17, bold=True), fill="#c4b5fd")
     for y, label in ((542, "Live lobby radar"), (578, "Game roulette"), (614, "Daily challenges"), (650, "Streaks + badges")):
         draw.ellipse((72, y + 7, 80, y + 15), fill="#38bdf8")
         draw.text((94, y), label, font=font(20), fill="#dbe5f5")

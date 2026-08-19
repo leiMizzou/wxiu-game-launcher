@@ -1,0 +1,4 @@
+interface:
+  display_name: "Open Vibe Media"
+  short_description: "Open YouTube or X content in the built-in Browser"
+  default_prompt: "Use $open-vibe-media to open a focus playlist on YouTube in the built-in Browser."

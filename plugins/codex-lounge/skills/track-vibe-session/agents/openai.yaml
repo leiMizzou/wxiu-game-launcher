@@ -1,0 +1,4 @@
+interface:
+  display_name: "Track Vibe Session"
+  short_description: "Record coding focus, links, notes, and outcomes locally"
+  default_prompt: "Use $track-vibe-session to start and locally track this coding session."

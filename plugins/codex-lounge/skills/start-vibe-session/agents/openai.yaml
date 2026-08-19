@@ -1,0 +1,4 @@
+interface:
+  display_name: "Start Vibe Session"
+  short_description: "Start a focused Codex coding session with the right vibe"
+  default_prompt: "Use $start-vibe-session to start a 45-minute focused coding session for this repository."

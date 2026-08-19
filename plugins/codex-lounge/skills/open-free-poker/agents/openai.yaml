@@ -1,0 +1,4 @@
+interface:
+  display_name: "Open Free Poker"
+  short_description: "Open free play-money poker and friend tables"
+  default_prompt: "Use $open-free-poker to open a free Texas Hold'em table for friends."
