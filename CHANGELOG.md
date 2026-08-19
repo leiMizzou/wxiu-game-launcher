@@ -9,6 +9,7 @@
 - Add release-oriented checks, documentation, release-note, and launch-draft workflows.
 - Add a strictly free, play-money Texas Hold'em break workflow with explicit gambling boundaries.
 - Reframe the wxiu arcade launcher, radar, roulette, challenges, achievements, and invites as Break Mode.
+- Split the Chinese and English manuals into language-switchable README pages.
 
 ## 0.2.0
 

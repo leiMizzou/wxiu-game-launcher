@@ -16,6 +16,8 @@ MARKETPLACE = ROOT / ".agents" / "plugins" / "marketplace.json"
 SKILLS = PLUGIN / "skills"
 PROGRESS_SCRIPT = SKILLS / "wxiu-daily-achievements" / "scripts" / "progress.py"
 SESSION_SCRIPT = SKILLS / "track-vibe-session" / "scripts" / "session.py"
+README_ZH = ROOT / "README.md"
+README_EN = ROOT / "README.en.md"
 
 
 def load_json(path: Path) -> dict:
@@ -37,6 +39,11 @@ def main() -> None:
     require(manifest.get("skills") == "./skills/", "skills path must be ./skills/")
     require(manifest.get("license") == "MIT", "manifest license must be MIT")
     require((ROOT / "LICENSE").is_file(), "LICENSE is missing")
+
+    require(README_ZH.is_file(), "Chinese README is missing")
+    require(README_EN.is_file(), "English README is missing")
+    require('href="README.en.md"' in README_ZH.read_text(encoding="utf-8"), "Chinese README has no English switch")
+    require('href="README.md"' in README_EN.read_text(encoding="utf-8"), "English README has no Chinese switch")
 
     entries = [entry for entry in marketplace.get("plugins", []) if entry.get("name") == PLUGIN_NAME]
     require(len(entries) == 1, "marketplace must contain exactly one plugin entry")

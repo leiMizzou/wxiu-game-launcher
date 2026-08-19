@@ -1,115 +1,79 @@
+<p align="center">
+  <strong>简体中文</strong> · <a href="README.en.md">English</a>
+</p>
+
 # Codex Lounge
 
-[中文](#中文说明) · [English](#english)
+> 写代码、看节目、找灵感、休息一下——不用离开 Codex。
 
-**Code, watch, explore, and take a break—without leaving Codex.**
+Codex Lounge 是一个开源 Codex 插件。它把内嵌 Browser 变成你的“代码客厅”：帮你进入专注状态、学习新技术、从 YouTube 和 X 获得灵感、完成发布收尾，也能开启有时间上限的游戏休息。
 
-An open-source plugin that turns the built-in Browser into a context-aware coding lounge: focus sessions, relevant YouTube and X inspiration, local progress, release preparation, and deliberate breaks.
+![Codex Lounge 在内嵌 Browser 中开启街机 Break Mode](assets/arcade-break-mode.png)
 
-![Codex Lounge opening an arcade break inside Codex](assets/arcade-break-mode.png)
+## 五种模式
 
-## 中文说明
+| 模式 | 适合什么时候 | Codex Lounge 会做什么 |
+| --- | --- | --- |
+| `deep-focus` | 想专心完成一件事 | 确定一个可验证的结果，尽量不打开媒体 |
+| `learn-and-build` | 边学边做 | 找一个与当前项目相关的视频，然后立即实现 |
+| `explore` | 需要技术或产品灵感 | 生成不超过 5 条的 YouTube + X 灵感雷达 |
+| `ship` | 准备提交或发布 | 检查 diff、运行测试、整理文档和 Release Notes |
+| `break` | 需要短暂换换脑子 | 打开 YouTube、X、免费扑克或街机，并保持休息有时间边界 |
 
-### 它做什么
+## 核心能力
 
-Codex Lounge 不只是一个游戏启动器。它会先看当前项目，再按你的目标进入五种模式：
+- 打开 YouTube 视频、节目、频道、播放列表和专注音乐。
+- 查看 X/Twitter 首页、个人主页、自己的帖子、书签和列表。
+- 根据当前仓库生成简短、可执行的灵感雷达。
+- 本地记录会话目标、模式、时长、链接、笔记和完成结果。
+- 检查测试、diff 和文档，准备 GitHub Release 与宣传草稿。
+- 开启免费德州扑克、wxiu 街机雷达、轮盘、挑战、成就和好友房。
 
-- `deep-focus`：只围绕一个可验证的编码结果工作，尽量不打开媒体。
-- `learn-and-build`：找一个与项目相关的 YouTube 教程或节目，看完关键内容后立即实现。
-- `explore`：从 YouTube 和 X/Twitter 做一份不超过 5 条的项目灵感雷达。
-- `ship`：检查 diff、运行测试、整理文档、release notes 和宣传文案。
-- `break`：开启有时间上限的 YouTube、X、免费德州扑克或街机休息。
-
-它还可以把目标、模式、时长、保存的链接、笔记和结果记录在本机，方便下一次 Codex 任务继续。
-
-### 可以这样说
+## 试试这样说
 
 ```text
-开始一个 45 分钟的 Vibe Coding，会话目标是完成登录页
-根据这个仓库找一个值得看的 YouTube 教程，然后陪我实现
+开始一个 45 分钟的 Vibe Coding 会话，目标是完成登录页
+根据当前仓库找一个值得看的 YouTube 教程，然后陪我实现
 看看 X 上最近有哪些和这个技术栈相关的高质量帖子
 保存这个视频到本次 coding 会话
-帮我收尾：跑测试、总结 diff、写 release notes
-开一个 15 分钟的免费德州扑克 Break Mode，两个人，不要真钱
+帮我收尾：跑测试、总结 diff、写 Release Notes
+开一个 15 分钟的免费德州扑克 Break Mode，不要真钱
 转一下街机轮盘：两个人，20 分钟，想轻松玩
 ```
 
-### 安装
+## 安装
 
-前置条件：Codex/ChatGPT 需要支持插件，并安装启用 OpenAI 官方 Browser 插件。
+需要支持插件的 Codex/ChatGPT，并安装启用 OpenAI 官方 Browser 插件。
 
 ```bash
 codex plugin marketplace add leiMizzou/codex-lounge --ref main
 codex plugin add codex-lounge@codex-lounge
 ```
 
-安装后新建一个 Codex 任务。首次访问 YouTube、X、扑克站点或 wxiu.com 时，可能需要确认站点权限或由你完成登录。
+安装后新建一个 Codex 任务。首次访问 YouTube、X、扑克网站或 wxiu.com 时，可能需要确认站点权限或由你完成登录。
 
-### 免费扑克 Break Mode
+## 免费扑克与安全边界
 
-插件只使用明确标注为免费或 play-money、没有现金价值和真实奖品的网页扑克候选站点，例如 [Poker Now](https://www.pokernow.com/)、[FlopHaus](https://flophauspoker.com/) 和 [pokr](https://www.pokr.live/)。每次打开前都会重新检查页面说明。
+Codex Lounge 只使用明确标注为免费或 play-money、没有现金价值和真实奖品的候选站点，并在打开前重新检查页面说明。
 
-它不会协助真钱、现金、加密货币、抽奖或有奖扑克，也不会处理充值、提现、购买筹码、转移价值、绕过地区限制或年龄检查。私人房间邀请只会起草，不会自动发送。
+插件不会协助真钱、现金、加密货币、抽奖或有奖扑克，也不会处理充值、提现、购买筹码、转移价值、绕过地区限制或年龄检查。登录、发帖、发送邀请、提交、推送和发布都不会仅因为生成了草稿就自动执行。
 
-### 本地数据与隐私
+## 本地数据
 
 - Vibe Coding 会话：`~/.codex/codex-lounge/sessions.json`
 - 街机挑战与成就：`~/.codex/codex-lounge/arcade-progress.json`
 
-插件只保存你明确要求记录的目标、模式、时长、链接、短笔记和结果；不保存登录凭据、Cookie、私信、完整 Feed、源码、浏览历史、邀请链接或 Browser 数据。两个本地工具都故意不提供 reset/delete 命令。
+只保存你明确要求记录的会话元数据。不保存登录凭据、Cookie、私信、完整 Feed、源码、Browser 历史或邀请链接；本地工具也不提供 reset/delete 命令。
 
-### 游戏边界
-
-街机功能仍可扫描 wxiu.com 大厅、游戏轮盘、每日挑战、成就和好友邀请，但现在属于 Break Mode。本项目不包含 ROM、模拟器文件、游戏资源或第三方网站代码，也不隶属于这些网站。请遵守网站规则和所在地法律。
-
-## English
-
-### Five session modes
-
-- `deep-focus`: one observable coding outcome with minimal media.
-- `learn-and-build`: one relevant video followed by implementation.
-- `explore`: a concise YouTube and X inspiration radar grounded in the repository.
-- `ship`: checks, diff review, documentation, release notes, and launch drafts.
-- `break`: a time-boxed YouTube, X, free poker, or arcade intermission.
-
-The plugin can also persist explicit session goals, links, notes, and outcomes locally so another Codex task can pick up the thread.
-
-### Install
-
-Install and enable OpenAI's Browser plugin first, then run:
-
-```bash
-codex plugin marketplace add leiMizzou/codex-lounge --ref main
-codex plugin add codex-lounge@codex-lounge
-```
-
-Start a new Codex task after installation. Try `Start a 45-minute Vibe Coding session`, `Find one YouTube tutorial relevant to this repo`, `Build an inspiration radar from YouTube and X`, or `Open a 15-minute free Texas Hold'em break with no real money`.
-
-### Safety and privacy
-
-Poker support is restricted to clearly free, play-money experiences with no cash value or real prizes. The plugin does not assist with deposits, withdrawals, paid chips, crypto, sweepstakes, geographic evasion, or age-check bypasses. Social actions, invitations, commits, pushes, merges, releases, and public posts are never performed merely because their drafts were prepared.
-
-Local session state is stored under `~/.codex/codex-lounge/`. It excludes credentials, cookies, private messages, source files, full feeds, and Browser history.
-
-## Repository layout
-
-```text
-.
-├── .agents/plugins/marketplace.json
-├── plugins/codex-lounge/
-│   ├── .codex-plugin/plugin.json
-│   └── skills/
-├── scripts/validate.py
-└── tests/
-```
-
-## Development
+## 开发与验证
 
 ```bash
 python3 scripts/validate.py
 python3 -m unittest discover -s tests -v
 ```
 
+仓库中包含 12 个 Skill、无第三方依赖的本地状态脚本，以及针对会话、街机记录和免费扑克边界的回归测试。
+
 ## License
 
-The plugin source and instructions are licensed under the [MIT License](LICENSE). Third-party websites, games, videos, posts, names, artwork, and trademarks are not covered by this license.
+插件源码与指令使用 [MIT License](LICENSE)。第三方网站、游戏、视频、帖子、名称、美术资源和商标不包含在本许可范围内。
